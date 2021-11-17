@@ -25,7 +25,7 @@ const HomePage = () => {
                             <div className="mt-14 sm:mt-10">
                                 <Fade>
                                     <a href="http://opensea.io/3dluxe" target="_blank">
-                                        <div className="px-10 py-6 text-white text-base cursor-pointer bg-black hover:bg-opacity-90 duration-300">View on Opensea</div>
+                                        <div className="px-10 py-6 text-white text-sm cursor-pointer bg-black hover:bg-opacity-90 duration-300">View on Opensea</div>
                                     </a>
                                 </Fade>
                             </div>
