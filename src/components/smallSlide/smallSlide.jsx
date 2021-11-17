@@ -22,7 +22,7 @@ const SmallSlider = (props) => {
                                 <div className="hidden sm:block border-r border-gray-600 border-opacity-30"></div>
                                 <div className="w-full sm:w-2/3 flex flex-col gap-10">
                                     <div className="flex justify-between items-center">
-                                        <h3 className="text-gray-700 text-2xl">Artwork</h3>
+                                        <h3 className="text-gray-700 text-3xl">Artwork</h3>
                                         <div className="flex gap-4">
                                             <div className="h-10 w-8 flex items-center">
                                                 <div className="bg-gray-700 w-full h-1"></div>
