@@ -37,7 +37,7 @@ const SliderComponent = () => {
                     stopOnHover={true}
                     transitionTime={600}
                     onChange={handleChange}
-                    swipeScrollTolerance={80}
+                    swipeScrollTolerance={5}
                 >
                     {items.map((item, index) => {
                         return (
@@ -70,7 +70,7 @@ const SliderComponent = () => {
                     stopOnHover={true}
                     transitionTime={600}
                     onChange={handleChange}
-                    swipeScrollTolerance={30}
+                    swipeScrollTolerance={5}
                 >
                     {items.map((item, index) => {
                         return (
@@ -78,7 +78,7 @@ const SliderComponent = () => {
                                 <div className="w-10/12 mx-auto">
                                     <div className="relative" style={{paddingTop: '100%'}}>
                                         <div className={`absolute top-0 bottom-0 left-0 right-0 transform duration-500 ${selectedThumb === index ? 'scale-125' : 'hover:scale-105'}`}>
-                                            <div className="h-full w-full bg-cover bg-center" style={{backgroundImage: `url('${process.env.PUBLIC_URL}/assets/media/main-bg.png')`}}></div>
+                                            <div className="h-full w-full bg-cover bg-center" style={{backgroundImage: `url('${item}')`}}></div>
                                         </div>
                                     </div>
                                 </div>

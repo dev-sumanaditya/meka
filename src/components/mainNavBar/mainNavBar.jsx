@@ -2,7 +2,6 @@ import React from 'react';
 import SocialIcons from '../social/social';
 
 import Fade from 'react-reveal/Fade';
-import { Link } from 'react-router-dom';
 
 const MainNavbar = (props) => {
     return (

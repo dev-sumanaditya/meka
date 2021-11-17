@@ -57,7 +57,8 @@ const TermsPage = () => {
         We reserve the right, at our sole discretion, to update, change or replace any part of these Terms of Service by posting updates and changes to our website. It is your responsibility to check our website periodically for changes. Your continued use of or access to our website or the Service following the posting of any changes to these Terms of Service constitutes acceptance of those changes.`
     ];
     return(
-        <div className="">
+        <div className="bg-primaryBG">
+            <div className="h-0 overflow-hidden">a</div>
             <MainNavbar />
             <div className="my-20">
                 <div className="max-w-5xl mx-auto">
