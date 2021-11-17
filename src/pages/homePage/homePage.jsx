@@ -126,7 +126,7 @@ const HomePage = () => {
                                     </p>
                                     <div className="pt-6">
                                         <a href="http://opensea.io/3dluxe" target="_blank">
-                                            <div className="px-10 w-max py-6 bg-indigo-600 hover:bg-indigo-700 text-white text-center sm:text-left">
+                                            <div className="px-10 w-max py-6 text-sm sm:text-base bg-indigo-600 hover:bg-indigo-700 text-white text-center sm:text-left">
                                                 Purchase Your Brand Depiction
                                             </div>
                                         </a>
