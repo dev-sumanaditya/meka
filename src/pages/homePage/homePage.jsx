@@ -30,7 +30,7 @@ const HomePage = () => {
     return (
         <div className="uppercase bg-primaryBG">
             {/* Top section */}
-            <div className="h-screen overflow-hidden">
+            <div className="">
                     <div className="flex flex-col h-full">
 
                         <MainNavbar />
@@ -57,10 +57,10 @@ const HomePage = () => {
                 <div className="flex flex-col sm:flex-row items-center gap-10 max-w-5xl mx-auto px-8 sm:px-2">
                     <div className="w-full sm:w-6/12">
                         <Fade>
-                            <h3 className="text-5xl text-pink">20 unique, Luxury NFT’s</h3>
-                            <h3 className="text-4xl text-gray-700 mt-2">that need Drivers..</h3>
-                            <p className="text-gray-700 mt-6">3DLUXE is a collection of 20 unique 3D Depictions with a few associative elements inspired by Burberry’s Apple iOS Design Award Winner.</p>
-                            <p className="text-gray-700 mt-4">Each artwork is original, with its own color palette and creation. The objective was provide complimentary ux in accordance with the 3D architecture in order to prioritize quality above quantity.</p>
+                            <h3 className="text-4xl text-pink">20 unique, Luxury NFT’s</h3>
+                            <h3 className="text-3xl text-gray-700 mt-2">that need Drivers..</h3>
+                            <p className="text-gray-700 text-base mt-6">3DLUXE is a collection of 20 unique 3D Depictions with a few associative elements inspired by Burberry’s Apple iOS Design Award Winner.</p>
+                            <p className="text-gray-700 text-base mt-4">Each artwork is original, with its own color palette and creation. The objective was provide complimentary ux in accordance with the 3D architecture in order to prioritize quality above quantity.</p>
                         </Fade>
                     </div>
                     <div data-lg-reveal className="w-full sm:w-6/12">
