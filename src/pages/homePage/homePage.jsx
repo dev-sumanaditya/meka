@@ -39,7 +39,7 @@ const HomePage = () => {
                     <div className="w-full sm:w-6/12">
                         <Fade>
                             <h3 className="text-3xl text-black">20 unique, Luxury NFT’s</h3>
-                            <h3 className="text-3xl text-gray-700 mt-4">that need Drivers..</h3>
+                            <h3 className="text-2xl text-gray-700 mt-4">that need Drivers..</h3>
                             <p className="text-gray-700 text-base mt-6">3DLUXE is a collection of 20 unique 3D Depictions with a few associative elements inspired by Burberry’s Apple iOS Design Award Winner.</p>
                             <p className="text-gray-700 text-base mt-4">Each artwork is original, with its own color palette and creation. The objective was provide complimentary ux in accordance with the 3D architecture in order to prioritize quality above quantity.</p>
                         </Fade>
@@ -62,7 +62,7 @@ const HomePage = () => {
                         <div className="flex flex-col sm:flex-row items-center gap-10 px-4 sm:px-2">
                             <div className="w-full sm:w-5/12 sm:text-right">
                                 <h4 style={{zIndex: 10}} className="text-3xl text-gray-700">Who are we?</h4>
-                                <h4 style={{zIndex: 10}} className="text-black text-3xl mt-2">Creative Teams</h4>
+                                <h4 style={{zIndex: 10}} className="text-black text-2xl mt-2">Creative Teams</h4>
                             </div>
                             <div className="w-full sm:w-7/12">
                                 <p className="text-base text-gray-700">
