@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="max-w-5xl mx-auto py-16">
                 <div className="flex flex-col-reverse sm:flex-row px-4 sm:px-0 justify-between gap-10">
                     <div className="">
-                        <img src={`${process.env.PUBLIC_URL}/assets/logo/logo.svg`} alt="" />
+                        <h1 className="text-3xl">HRMZ.</h1>
                         <p className="text-gray-700 mt-4">20 unique social depictions</p>
 
                         <p className="text-gray-700 text-xs mt-16">©2021 HRMZ. All rights reserved.</p>
