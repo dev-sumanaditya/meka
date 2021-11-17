@@ -1,0 +1,22 @@
+.ctr {
+    box-shadow: 0px 0px 1px 1px #fff;
+}
+.icon {
+    z-index: 10;
+}
+.bg {
+    max-height: 0px;
+    z-index: 2;
+    transition-duration: 0.6s;
+    width: 100%;
+}
+.ctr:hover .bg{
+    max-height: 100px;
+}
+
+.ctr-blue {
+    box-shadow: 0px 0px 1px 1px rgb(71,83,214);
+}
+.ctr-blue:hover .bg{
+    max-height: 100px;
+}
