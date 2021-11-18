@@ -20,7 +20,7 @@ const SliderComponent = () => {
         className:"",
         centerMode: true,
         infinite: true,
-        centerPadding: "60px",
+        centerPadding: "40px",
         slidesToShow: 3,
         speed: 500,
         accessibility: false,

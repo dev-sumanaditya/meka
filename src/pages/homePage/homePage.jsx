@@ -17,7 +17,7 @@ const HomePage = () => {
                         <MainNavbar />
 
                         <div className="flex flex-col flex-grow items-center justify-center">
-                            <div className="w-5/6 sm:w-8/12 md:w-6/12 lg:w-6/12 xl:w-4/12 mt-16 sm:mt-2">
+                            <div className="w-11/12 sm:w-8/12 md:w-6/12 lg:w-6/12 xl:w-4/12 mt-16 sm:mt-2">
                                 <video width="100%" height="100%" autoPlay muted loop>
                                     <source src={`${process.env.PUBLIC_URL}/assets/video/coach_text.mp4`} type="video/mp4"/>
                                 </video>
@@ -35,7 +35,7 @@ const HomePage = () => {
 
             {/* rest content */}
             <div className="bg-primaryBG pt-24">
-                <div className="flex flex-col sm:flex-row items-center gap-10 max-w-5xl mx-auto px-8 sm:px-4">
+                <div className="flex flex-col sm:flex-row items-center gap-10 max-w-5xl mx-auto px-4">
                     <div className="w-full sm:w-6/12">
                         <Fade>
                             <h3 className="text-3xl text-black">20 unique, Luxury NFT’s</h3>

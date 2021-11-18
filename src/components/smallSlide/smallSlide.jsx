@@ -9,7 +9,7 @@ const SmallSlider = (props) => {
                 <Fade>
                     <div className="pt-24 sm:pt-32 px-4">
                         <div className="max-w-5xl mx-auto">
-                            <div className="flex flex-col lg:flex-row gap-10 md:gap-6 lg:gap-10 sm:gap-16 px-4 sm:px-0">
+                            <div className="flex flex-col lg:flex-row gap-10 md:gap-6 lg:gap-10 sm:gap-16">
                                 <div className="w-full lg:w-1/3 flex flex-col gap-10">
                                     <div className="flex justify-between items-center">
                                         <h3 className="text-gray-700 text-3xl">{props.title}</h3>
