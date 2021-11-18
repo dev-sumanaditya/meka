@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import SocialIcons from '../social/social';
-
+import './footer.css';
 
 const Footer = () => {
     return (
@@ -16,9 +16,9 @@ const Footer = () => {
                     </div>
                     
                     <div>
-                        <div className="flex-col gap-2 hidden sm:flex">
-                            <Link to="" className="text-gray-700 text-sm">Home</Link>
-                            <Link to="/terms" className="text-gray-500 text-sm">Terms & Conditions</Link>
+                        <div className="flex-col gap-2 hidden sm:flex text-gray-500">
+                            <NavLink activeClassName="active" to="/" className="text-sm">Home</NavLink>
+                            <NavLink activeClassName="active" to="/terms" className="text-sm">Terms & Conditions</NavLink>
                         </div>
 
                         <div className="mt-10">
