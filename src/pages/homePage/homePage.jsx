@@ -17,7 +17,7 @@ const HomePage = () => {
                         <MainNavbar />
 
                         <div className="flex flex-col flex-grow items-center justify-center">
-                            <div className="w-5/6 sm:w-4/12 mt-16 sm:mt-2">
+                            <div className="w-5/6 sm:w-8/12 md:w-6/12 lg:w-6/12 xl:w-4/12 mt-16 sm:mt-2">
                                 <video width="100%" height="100%" autoPlay muted loop>
                                     <source src={`${process.env.PUBLIC_URL}/assets/video/coach_text.mp4`} type="video/mp4"/>
                                 </video>
@@ -34,12 +34,11 @@ const HomePage = () => {
             </div>
 
             {/* rest content */}
-            <div className="bg-primaryBG sm:pt-24">
-                <div className="flex flex-col sm:flex-row items-center gap-10 max-w-5xl mx-auto px-8 sm:px-2">
+            <div className="bg-primaryBG pt-24">
+                <div className="flex flex-col sm:flex-row items-center gap-10 max-w-5xl mx-auto px-8 sm:px-4">
                     <div className="w-full sm:w-6/12">
                         <Fade>
                             <h3 className="text-3xl text-black">20 unique, Luxury NFT’s</h3>
-                            <h3 className="text-2xl text-gray-700 mt-4">that need Drivers..</h3>
                             <p className="text-gray-700 text-base mt-6">3DLUXE is a collection of 20 unique 3D Depictions with a few associative elements inspired by Burberry’s Apple iOS Design Award Winner.</p>
                             <p className="text-gray-700 text-base mt-4">Each artwork is original, with its own color palette and creation. The objective was provide complimentary ux in accordance with the 3D architecture in order to prioritize quality above quantity.</p>
                         </Fade>
@@ -59,8 +58,8 @@ const HomePage = () => {
 
                 <Fade>
                     <div className="max-w-5xl mx-auto relative">
-                        <div className="flex flex-col sm:flex-row items-center gap-10 px-4 sm:px-2">
-                            <div className="w-full sm:w-5/12 sm:text-right">
+                        <div className="flex flex-col sm:flex-row gap-10 px-4 sm:px-4">
+                            <div className="w-full sm:w-5/12">
                                 <h4 style={{zIndex: 10}} className="text-3xl text-gray-700">Who are we?</h4>
                                 <h4 style={{zIndex: 10}} className="text-black text-2xl mt-2">Creative Teams</h4>
                             </div>
@@ -75,14 +74,14 @@ const HomePage = () => {
 
 
                 <SmallSlider
-                    leftImg={`${process.env.PUBLIC_URL}/assets/nft/6.png`}
+                    leftImg={`${process.env.PUBLIC_URL}/assets/nft/prada.jpg`}
                     title="Elise T"
                     img1={`${process.env.PUBLIC_URL}/assets/nft/red.jpg`}
                     img2={`${process.env.PUBLIC_URL}/assets/nft/8.jpg`}
                 />
                 
                 <div className="mt-10 bg-cover bg-center">
-                    <div className="max-w-5xl mx-auto py-10 sm:py-28 px-4 sm:px-0">
+                    <div className="max-w-5xl mx-auto py-10 sm:py-28 px-4">
                         <div className="flex flex-col sm:flex-row items-center gap-10">
                             <Fade>
                                 <div className="w-full sm:w-1/2">

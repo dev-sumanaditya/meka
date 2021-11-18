@@ -7,10 +7,10 @@ const SmallSlider = (props) => {
     return (
             <div>
                 <Fade>
-                    <div className="pt-32">
+                    <div className="pt-24 sm:pt-32 px-4">
                         <div className="max-w-5xl mx-auto">
-                            <div className="flex flex-col sm:flex-row gap-10 sm:gap-16 px-4 sm:px-0">
-                                <div className="w-full sm:w-1/3 flex flex-col gap-10">
+                            <div className="flex flex-col lg:flex-row gap-10 md:gap-6 lg:gap-10 sm:gap-16 px-4 sm:px-0">
+                                <div className="w-full lg:w-1/3 flex flex-col gap-10">
                                     <div className="flex justify-between items-center">
                                         <h3 className="text-gray-700 text-3xl">{props.title}</h3>
                                         <SocialIcons2 white />
@@ -19,8 +19,8 @@ const SmallSlider = (props) => {
                                         <div className="bg-cover bg-center" style={{paddingTop: '100%', backgroundImage: `url('${props.leftImg}')`}}></div>
                                     </div>
                                 </div>
-                                <div className="hidden sm:block border-r border-gray-600 border-opacity-30"></div>
-                                <div className="w-full sm:w-2/3 flex flex-col gap-10">
+                                <div className="hidden md:block border-r border-gray-600 border-opacity-30"></div>
+                                <div className="w-full lg:w-2/3 flex flex-col gap-10">
                                     <div className="flex justify-between items-center">
                                         <h3 className="text-gray-700 text-3xl">Artwork</h3>
                                         <div className="flex gap-4">
@@ -33,9 +33,17 @@ const SmallSlider = (props) => {
                                         </div>
                                     </div>
                                     <div className="h-full">
-                                        <div className="h-full flex gap-4">
-                                            <div className="w-1/2 h-64 sm:h-full bg-cover bg-center" style={{backgroundImage: `url('${props.img1}')`}}></div>
-                                            <div className="w-1/2 h-64 sm:h-full bg-cover bg-center" style={{backgroundImage: `url('${props.img2}')`}}></div>
+                                        <div className="h-full flex flex-col sm:flex-row gap-4">
+                                            <div className="w-full md:w-1/2">
+                                                <div style={{paddingTop: '100%'}} className="relative">
+                                                    <div className="absolute top-0 left-0 h-full w-full bg-cover bg-center" style={{backgroundImage: `url('${props.img1}')`}}></div>
+                                                </div>
+                                            </div>
+                                            <div className="w-full md:w-1/2">
+                                                <div style={{paddingTop: '100%'}} className="relative">
+                                                    <div className="absolute top-0 left-0 h-full w-full bg-cover bg-center" style={{backgroundImage: `url('${props.img2}')`}}></div>
+                                                </div>    
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
