@@ -9,11 +9,11 @@ const SliderComponent = () => {
     const sliderRef = useRef();
 
     const items = [
-        `${process.env.PUBLIC_URL}/assets/nft/0.png`,
-        `${process.env.PUBLIC_URL}/assets/nft/1.png`,
-        `${process.env.PUBLIC_URL}/assets/nft/2.png`,
-        `${process.env.PUBLIC_URL}/assets/nft/3.png`,
-        `${process.env.PUBLIC_URL}/assets/nft/4.png`,
+        `${process.env.PUBLIC_URL}/assets/slide/C1.jpeg`,
+        `${process.env.PUBLIC_URL}/assets/slide/G1.jpeg`,
+        `${process.env.PUBLIC_URL}/assets/slide/L1.jpeg`,
+        `${process.env.PUBLIC_URL}/assets/slide/MJ1.jpeg`,
+        `${process.env.PUBLIC_URL}/assets/slide/MK1.jpeg`,
     ];
 
     const [selectedThumb, setSelectedThumb] = useState(0);

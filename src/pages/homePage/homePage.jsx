@@ -46,7 +46,7 @@ const HomePage = () => {
                     <div data-lg-reveal className="w-full sm:w-6/12">
                         <div className="w-full relative" style={{paddingTop: '100%'}}>
                             <Fade>
-                                <div className="absolute top-0 bottom-0 left-0 right-0 bg-cover bg-center"  style={{backgroundImage: `url('${process.env.PUBLIC_URL}/assets/nft/6.png')`}}></div>
+                                <div className="absolute top-0 bottom-0 left-0 right-0 bg-cover bg-center"  style={{backgroundImage: `url('${process.env.PUBLIC_URL}/assets/nft/merged.gif')`}}></div>
                             </Fade>
                         </div>
                     </div>
