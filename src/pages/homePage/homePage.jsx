@@ -34,8 +34,8 @@ const HomePage = () => {
             </div>
 
             {/* rest content */}
-            <div className="bg-primaryBG pt-24">
-                <div className="flex flex-col sm:flex-row items-center gap-10 max-w-5xl mx-auto px-4">
+            <div className="bg-primaryBG pt-24 px-4">
+                <div className="flex flex-col sm:flex-row items-center gap-10 max-w-5xl mx-auto">
                     <div className="w-full sm:w-6/12">
                         <Fade>
                             <h3 className="text-3xl text-black">20 unique, Luxury NFT’s</h3>
@@ -57,16 +57,18 @@ const HomePage = () => {
                 </div>
 
                 <Fade>
-                    <div className="max-w-5xl mx-auto relative">
-                        <div className="flex flex-col sm:flex-row gap-10 px-4 sm:px-4">
-                            <div className="w-full sm:w-5/12">
-                                <h4 style={{zIndex: 10}} className="text-3xl text-gray-700">Who are we?</h4>
-                                <h4 style={{zIndex: 10}} className="text-black text-2xl mt-2">Creative Teams</h4>
-                            </div>
-                            <div className="w-full sm:w-7/12">
-                                <p className="text-base text-gray-700">
-                                Hi! Elise T & Winston are two friends currently focusing on 3D, Art direction, & UX. We have been working hard to establish our own archetypal style, and we're continuously looking for new ways to push ourselves. Elise has worked with Prada, Gisou, Agent Nateur, & more!
-                                </p>
+                    <div className="px-4">
+                        <div className="max-w-5xl mx-auto relative">
+                            <div className="flex flex-col sm:flex-row gap-10">
+                                <div className="w-full sm:w-5/12">
+                                    <h4 style={{zIndex: 10}} className="text-3xl text-gray-700">Who are we?</h4>
+                                    <h4 style={{zIndex: 10}} className="text-black text-2xl mt-2">Creative Teams</h4>
+                                </div>
+                                <div className="w-full sm:w-7/12">
+                                    <p className="text-base text-gray-700">
+                                    Hi! Elise T & Winston are two friends currently focusing on 3D, Art direction, & UX. We have been working hard to establish our own archetypal style, and we're continuously looking for new ways to push ourselves. Elise has worked with Prada, Gisou, Agent Nateur, & more!
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -80,8 +82,8 @@ const HomePage = () => {
                     img2={`${process.env.PUBLIC_URL}/assets/nft/8.jpg`}
                 />
                 
-                <div className="mt-10 bg-cover bg-center">
-                    <div className="max-w-5xl mx-auto py-10 sm:py-28 px-4">
+                <div className="mt-10 px-4">
+                    <div className="max-w-5xl mx-auto py-10 sm:py-28">
                         <div className="flex flex-col sm:flex-row items-center gap-10">
                             <Fade>
                                 <div className="w-full sm:w-1/2">

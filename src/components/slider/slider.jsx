@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Fade from 'react-reveal/Fade';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
 const SliderComponent = () => {
+
+    const sliderRef = useRef();
 
     const items = [
         `${process.env.PUBLIC_URL}/assets/nft/0.png`,
@@ -26,7 +28,7 @@ const SliderComponent = () => {
         accessibility: false,
         arrows: false,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 4000,
         dots: false,
         draggable: true,
         focusOnSelect: true,
@@ -59,7 +61,8 @@ const SliderComponent = () => {
             }
         ],
         swipeToSlide: true,
-        afterChange: current => setSelectedThumb(current)
+        afterChange: (current) => setSelectedThumb(current),
+        beforeChange: (current, next) => setSelectedThumb(next)
     };
 
     const SlideItem = (props) => {
@@ -80,7 +83,7 @@ const SliderComponent = () => {
     return (
         <Fade>
             <div className="">
-                <Slider {...settings}>
+                <Slider ref={sliderRef} {...settings}>
                     {items.map((item,index) => {
                         return (
                             <SlideItem item={item} key={index} index={index}/>
@@ -94,7 +97,7 @@ const SliderComponent = () => {
             <div className="mt-14 flex items-center justify-center gap-2">
                 {items.map((item,index) => {
                     return (
-                        <div key={index} className={`h-1 w-10 ${selectedThumb === index ? 'bg-white' : 'bg-gray-400 bg-opacity-60'}`}></div>
+                        <div key={index} onClick={() => {sliderRef.current.slickGoTo(index)}} className={`h-1 w-10 duration-300 ${selectedThumb === index ? 'bg-gray-700' : 'bg-gray-400 bg-opacity-60 cursor-pointer'}`}></div>
                     )
                 })}
             </div>
