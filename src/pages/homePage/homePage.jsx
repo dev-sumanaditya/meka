@@ -1,15 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
 import MainNavbar from '../../components/mainNavBar/mainNavBar';
 
 import Fade from 'react-reveal/Fade';
 import SliderComponent from '../../components/slider/slider';
 import SmallSlider from '../../components/smallSlide/smallSlide';
 import Footer from '../../components/footer/footer';
+import VideoPlayer from '../../components/player/player';
 
 const HomePage = () => {
 
+    const [showVideo, setShowVideo] = useState(false)
+
+    const playVideo = () => {
+        setShowVideo(true);
+        setTimeout(() => {
+            document.body.style.overflow = "hidden";
+        }, 100)
+    }
+
+    const hideVideo = () => {
+        setShowVideo(false);
+        if(document.body.style.overflow === "hidden") {
+            document.body.style.overflow = "auto";
+        }
+    }
+
     return (
         <div className="uppercase bg-primaryBG">
+            {   showVideo &&
+                <div className="fixed top-0 bottom-0 left-0 right-0 z-50">
+                    <Fade>
+                        <div className="h-full w-full bg-primaryBG relative">
+                            <div className="p-4 flex justify-end absolute top-0 w-full left-0">
+                                <div onClick={hideVideo} className="p-4 cursor-pointer hover:bg-gray-300">close</div>
+                            </div>
+                            <div className="h-full flex items-center justify-center">
+                                <VideoPlayer />
+                            </div>
+                        </div>
+                    </Fade>
+                </div>
+            }
             {/* Top section */}
             <div className="">
                     <div className="flex flex-col h-full">
@@ -19,14 +50,14 @@ const HomePage = () => {
                         <div className="flex flex-col flex-grow items-center justify-center">
                             <div className="w-11/12 sm:w-8/12 md:w-6/12 lg:w-6/12 xl:w-4/12 mt-16 sm:mt-2">
                                 <video width="100%" height="100%" autoPlay muted loop>
-                                    <source src={`${process.env.PUBLIC_URL}/assets/video/coach_text.mp4`} type="video/mp4"/>
+                                    <source src={`${process.env.PUBLIC_URL}/assets/video/COA.mp4`} type="video/mp4"/>
                                 </video>
                             </div>
                             <div className="mt-14 sm:mt-10">
                                 <Fade>
-                                    <a href="http://opensea.io/3dluxe" target="_blank">
-                                        <div className="px-10 py-6 text-white text-sm cursor-pointer bg-black hover:bg-opacity-90 duration-300">View on Opensea</div>
-                                    </a>
+                                    <button onClick={playVideo}>
+                                        <div className="px-10 py-6 text-white text-sm cursor-pointer bg-black hover:bg-opacity-90 duration-300">PLAY</div>
+                                    </button>
                                 </Fade>
                             </div>
                         </div>
@@ -105,7 +136,7 @@ const HomePage = () => {
                                     <div className="w-full relative" style={{paddingTop: '100%'}}>
                                         <div className="absolute top-0 left-0 h-full w-full">
                                             <video width="100%" height="100%" autoPlay muted loop>
-                                                <source src={`${process.env.PUBLIC_URL}/assets/video/gucci_text.mp4`} type="video/mp4"/>
+                                                <source src={`${process.env.PUBLIC_URL}/assets/video/GUC.mp4`} type="video/mp4"/>
                                             </video>
                                         </div>
                                     </div>
