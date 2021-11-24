@@ -9,6 +9,7 @@ module.exports = {
       colors: {
         primaryBlack:'#01030D',
         pink: '#dc3b73',
+        // #EBEAEB
         primaryBG: '#EBEAEB'
       }
     },

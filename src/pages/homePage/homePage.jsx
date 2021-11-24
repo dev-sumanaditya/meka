@@ -28,11 +28,11 @@ const HomePage = () => {
     return (
         <div className="uppercase bg-primaryBG">
             {   showVideo &&
-                <div className="fixed top-0 bottom-0 left-0 right-0 z-50">
+                <div className="fixed top-0 bottom-0 left-0 bg-primaryBG bg-opacity-60 right-0 z-50">
                     <Fade>
-                        <div className="h-full w-full bg-primaryBG relative">
+                        <div className="h-full w-full relative select-none">
                             <div className="p-4 flex justify-end absolute top-0 w-full left-0">
-                                <div onClick={hideVideo} className="p-4 cursor-pointer hover:bg-gray-300">close</div>
+                                <div onClick={hideVideo} className="p-4 cursor-pointer bg-black text-white">close</div>
                             </div>
                             <div className="h-full flex items-center justify-center">
                                 <VideoPlayer />
@@ -47,10 +47,10 @@ const HomePage = () => {
 
                         <MainNavbar />
 
-                        <div className="flex flex-col flex-grow items-center justify-center">
-                            <div className="w-11/12 sm:w-8/12 md:w-6/12 lg:w-6/12 xl:w-4/12 mt-16 sm:mt-2">
-                                <video width="100%" height="100%" autoPlay muted loop>
-                                    <source src={`${process.env.PUBLIC_URL}/assets/video/COA.mp4`} type="video/mp4"/>
+                        <div className="w-full mx-auto flex flex-col items-center justify-center">
+                            <div className="w-full mt-16 sm:mt-2">
+                                <video width="100%" preload="auto" autoPlay muted loop>
+                                    <source src={`${process.env.PUBLIC_URL}/assets/video/triad1.mp4`} type="video/mp4"/>
                                 </video>
                             </div>
                             <div className="mt-14 sm:mt-10">
@@ -65,26 +65,39 @@ const HomePage = () => {
             </div>
 
             {/* rest content */}
-            <div className="bg-primaryBG pt-24 px-4">
-                <div className="flex flex-col sm:flex-row items-center gap-10 max-w-5xl mx-auto">
-                    <div className="w-full sm:w-6/12">
-                        <Fade>
-                            <h3 className="text-3xl text-black">20 unique, Luxury NFT’s</h3>
-                            <p className="text-gray-700 text-base mt-6">3DLUXE is a collection of 20 unique 3D Depictions with a few associative elements inspired by Burberry’s Apple iOS Design Award Winner.</p>
-                            <p className="text-gray-700 text-base mt-4">Each artwork is original, with its own color palette and creation. The objective was provide complimentary ux in accordance with the 3D architecture in order to prioritize quality above quantity.</p>
-                        </Fade>
-                    </div>
-                    <div data-lg-reveal className="w-full sm:w-6/12">
-                        <div className="w-full relative" style={{paddingTop: '100%'}}>
+            <div className="bg-primaryBG pt-24">
+                <div className="px-4">
+                    <div className="flex flex-col sm:flex-row items-center gap-10 max-w-5xl mx-auto">
+                        <div className="w-full sm:w-6/12">
                             <Fade>
-                                <div className="absolute top-0 bottom-0 left-0 right-0 bg-cover bg-center"  style={{backgroundImage: `url('${process.env.PUBLIC_URL}/assets/nft/merged.gif')`}}></div>
+                                <h3 className="text-3xl text-black">10 unique, Luxury NFT’s</h3>
+                                <p className="text-gray-700 text-base mt-6">3DLUXE is a collection of 10 unique 3D Depictions with a few associative elements inspired by Burberry’s Apple iOS Design Award Winner.</p>
+                                <p className="text-gray-700 text-base mt-4">Each artwork is original, with its own color palette and creation. The objective was provide complimentary ux in accordance with the 3D architecture in order to prioritize quality above quantity.</p>
                             </Fade>
+                        </div>
+                        <div data-lg-reveal className="w-full sm:w-6/12">
+                            <div className="w-full relative" style={{paddingTop: '100%'}}>
+                                <Fade>
+                                    <div className="absolute top-0 bottom-0 left-0 right-0 bg-cover bg-center"  style={{backgroundImage: `url('${process.env.PUBLIC_URL}/assets/nft/merged.gif')`}}></div>
+                                </Fade>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div className="py-32">
                     <SliderComponent />
+                </div>
+
+                <div className="bg-black mb-20 py-20">
+                    <div className="max-w-5xl mx-auto flex flex-col items-center gap-20">
+                        <div className="w-10/12 sm:w-8/12 lg:w-6/12">
+                            <video width="100%" height="100%" autoPlay muted loop>
+                                <source src={`${process.env.PUBLIC_URL}/assets/video/promo2.mov`} type="video/mp4"/>
+                            </video>
+                        </div>
+                        <a href="http://opensea.io/3dluxe" target="_blank" className="bg-white text-black px-10 py-6 cursor-pointer">View on Opensea</a>
+                    </div>
                 </div>
 
                 <Fade>
@@ -136,7 +149,7 @@ const HomePage = () => {
                                     <div className="w-full relative" style={{paddingTop: '100%'}}>
                                         <div className="absolute top-0 left-0 h-full w-full">
                                             <video width="100%" height="100%" autoPlay muted loop>
-                                                <source src={`${process.env.PUBLIC_URL}/assets/video/GUC.mp4`} type="video/mp4"/>
+                                                <source src={`${process.env.PUBLIC_URL}/assets/video/promo3.mov`} type="video/mp4"/>
                                             </video>
                                         </div>
                                     </div>
