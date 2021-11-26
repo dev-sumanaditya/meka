@@ -11,21 +11,17 @@ const VideoPlayer = () => {
     return (
         <div className="h-full">
                 <div className="h-full flex items-center justify-center">
-                    <div className="w-11/12 sm:w-9/12 md:w-6/12 lg:w-5/12 xl:w-4/12 2xl:w-4/12" style={{maxHeight: '100vh'}}>
+                    <div className="w-11/12 sm:w-8/12 md:w-7/12 lg:w-7/12 xl:w-8/12 2xl:w-7/12" style={{maxHeight: '100vh'}}>
                         <div className="h-full w-full shadow-lg border border-black relative" style={{borderWidth: 7}}>
-                            {/* <ReactPlayer
+                            <ReactPlayer
                                 height="100%"
                                 width="100%"
                                 loop
                                 playing={playing.current}
-                                url={`${process.env.PUBLIC_URL}/assets/video/brands.mov`}
+                                url={`${process.env.PUBLIC_URL}/assets/video/${Math.random() < 0.5 ? 'light':'dark'}1.mov`}
                                 onBuffer={() => {setBuffering(true)}}
                                 onBufferEnd={() => {setBuffering(false)}}
-                            /> */}
-
-                            <video width="100%" preload="auto" autoPlay muted loop>
-                                <source src={`${process.env.PUBLIC_URL}/assets/video/brands.mp4`} type="video/mp4"/>
-                            </video>
+                            />
                             <div className="absolute top-0 left-0 h-full w-full">
                                 {
                                     buffering &&

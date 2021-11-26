@@ -48,9 +48,14 @@ const HomePage = () => {
                         <MainNavbar />
 
                         <div className="w-full mx-auto flex flex-col items-center justify-center">
-                            <div className="w-full mt-16 sm:mt-2">
+                            <div className="hidden sm:block w-full mt-16 sm:mt-2">
                                 <video width="100%" preload="auto" autoPlay muted loop>
-                                    <source src={`${process.env.PUBLIC_URL}/assets/video/triad1.mp4`} type="video/mp4"/>
+                                    <source src={`${process.env.PUBLIC_URL}/assets/video/triad${Math.random() < 0.5 ? '1':'2'}.mp4`} type="video/mp4"/>
+                                </video>
+                            </div>
+                            <div className="sm:hidden w-full">
+                                <video width="100%" preload="auto" autoPlay muted loop>
+                                    <source src={`${process.env.PUBLIC_URL}/assets/video/GUC.mp4`} type="video/mp4"/>
                                 </video>
                             </div>
                             <div className="mt-14 sm:mt-10">
@@ -70,8 +75,8 @@ const HomePage = () => {
                     <div className="flex flex-col sm:flex-row items-center gap-10 max-w-5xl mx-auto">
                         <div className="w-full sm:w-6/12">
                             <Fade>
-                                <h3 className="text-3xl text-black">10 unique, Luxury NFT’s</h3>
-                                <p className="text-gray-700 text-base mt-6">3DLUXE is a collection of 10 unique 3D Depictions with a few associative elements inspired by Burberry’s Apple iOS Design Award Winner.</p>
+                                <h3 className="text-3xl text-black">20+ unique, Luxury NFT’s</h3>
+                                <p className="text-gray-700 text-base mt-6">3DLUXE is a collection of 20+ unique 3D Depictions with a few associative elements inspired by Burberry’s Apple iOS Design Award Winner.</p>
                                 <p className="text-gray-700 text-base mt-4">Each artwork is original, with its own color palette and creation. The objective was provide complimentary ux in accordance with the 3D architecture in order to prioritize quality above quantity.</p>
                             </Fade>
                         </div>
@@ -93,10 +98,10 @@ const HomePage = () => {
                     <div className="max-w-5xl mx-auto flex flex-col items-center gap-20">
                         <div className="w-10/12 sm:w-8/12 lg:w-6/12">
                             <video width="100%" height="100%" autoPlay muted loop>
-                                <source src={`${process.env.PUBLIC_URL}/assets/video/promo2.mov`} type="video/mp4"/>
+                                <source src={`${process.env.PUBLIC_URL}/assets/video/${Math.random() < 0.5 ? 'light':'dark'}2.mov`} type="video/mp4"/>
                             </video>
                         </div>
-                        <a href="http://opensea.io/3dluxe" target="_blank" className="bg-white text-black px-10 py-6 cursor-pointer">View on Opensea</a>
+                        <a href="http://opensea.io/3dluxe" target="_blank" className="bg-white text-black px-10 py-6 cursor-pointer transform  duration-300 hover:scale-105">View on Opensea</a>
                     </div>
                 </div>
 
@@ -126,11 +131,11 @@ const HomePage = () => {
                     img2={`${process.env.PUBLIC_URL}/assets/nft/8.jpg`}
                 />
                 
-                <div className="mt-10 px-4">
+                <div className="mt-10 px-0 sm:px-4">
                     <div className="max-w-5xl mx-auto py-10 sm:py-28">
                         <div className="flex flex-col sm:flex-row items-center gap-10">
                             <Fade>
-                                <div className="w-full sm:w-1/2">
+                                <div className="w-full sm:w-1/2 px-4 sm:px-0">
                                     <h2 className="text-gray-900 text-3xl">Purchase Your Depiction</h2>
                                     <p className="my-6 text-gray-700 text-base">
                                     3DLUXE has a limited # of depictions! If you want to purchase your favorite brand depictions, head over to Openseas for the exclusive NFT listing. Each is 1/1.
@@ -149,7 +154,7 @@ const HomePage = () => {
                                     <div className="w-full relative" style={{paddingTop: '100%'}}>
                                         <div className="absolute top-0 left-0 h-full w-full">
                                             <video width="100%" height="100%" autoPlay muted loop>
-                                                <source src={`${process.env.PUBLIC_URL}/assets/video/promo3.mov`} type="video/mp4"/>
+                                                <source src={`${process.env.PUBLIC_URL}/assets/video/light1.mov`} type="video/mp4"/>
                                             </video>
                                         </div>
                                     </div>
