@@ -47,23 +47,25 @@ const HomePage = () => {
 
                         <MainNavbar />
 
-                        <div className="w-full mx-auto flex flex-col items-center justify-center">
-                            <div className="hidden sm:block w-full mt-16 sm:mt-2">
-                                <video width="100%" preload="auto" autoPlay muted loop>
-                                    <source src={`${process.env.PUBLIC_URL}/assets/video/triad${Math.random() < 0.5 ? '1':'2'}.mp4`} type="video/mp4"/>
-                                </video>
-                            </div>
-                            <div className="sm:hidden w-full">
-                                <video width="100%" preload="auto" autoPlay muted loop>
-                                    <source src={`${process.env.PUBLIC_URL}/assets/video/GUC.mp4`} type="video/mp4"/>
-                                </video>
-                            </div>
-                            <div className="mt-14 sm:mt-10">
-                                <Fade>
-                                    <button onClick={playVideo}>
-                                        <div className="px-10 py-6 text-white text-sm cursor-pointer bg-black hover:bg-opacity-90 duration-300">PLAY</div>
-                                    </button>
-                                </Fade>
+                        <div className="max-w-6xl mx-auto mt-8">
+                            <div className="w-full flex flex-col items-center justify-center">
+                                <div className="hidden sm:block w-full mt-16 sm:mt-2">
+                                    <video width="100%" preload="auto" autoPlay muted loop>
+                                        <source src={`${process.env.PUBLIC_URL}/assets/video/triad${Math.random() < 0.5 ? '1':'2'}.mp4`} type="video/mp4"/>
+                                    </video>
+                                </div>
+                                <div className="sm:hidden w-full">
+                                    <video width="100%" preload="auto" autoPlay muted loop>
+                                        <source src={`${process.env.PUBLIC_URL}/assets/video/GUC.mp4`} type="video/mp4"/>
+                                    </video>
+                                </div>
+                                <div className="mt-14 sm:mt-10">
+                                    <Fade>
+                                        <button onClick={playVideo}>
+                                            <div className="px-10 py-6 text-white text-sm cursor-pointer bg-black hover:bg-opacity-90 duration-300">PLAY</div>
+                                        </button>
+                                    </Fade>
+                                </div>
                             </div>
                         </div>
                     </div>                
@@ -94,14 +96,14 @@ const HomePage = () => {
                     <SliderComponent />
                 </div>
 
-                <div className="bg-black mb-20 py-20">
+                <div className="bg-black mb-20 pb-20 pt-0 sm:pt-20">
                     <div className="max-w-5xl mx-auto flex flex-col items-center gap-20">
-                        <div className="w-10/12 sm:w-8/12 lg:w-6/12">
+                        <div className="w-full sm:w-8/12 lg:w-6/12">
                             <video width="100%" height="100%" autoPlay muted loop>
-                                <source src={`${process.env.PUBLIC_URL}/assets/video/${Math.random() < 0.5 ? 'light':'dark'}2.mov`} type="video/mp4"/>
+                                <source src={`${process.env.PUBLIC_URL}/assets/video/${Math.random() < 0.5 ? 'light':'dark'}2.mp4`} type="video/mp4"/>
                             </video>
                         </div>
-                        <a href="http://opensea.io/3dluxe" target="_blank" className="bg-white text-black px-10 py-6 cursor-pointer transform  duration-300 hover:scale-105">View on Opensea</a>
+                        <a href="http://opensea.io/3dluxe" target="_blank" className="bg-white text-black text-sm px-10 py-6 cursor-pointer transform  duration-300 hover:scale-105">View on Opensea</a>
                     </div>
                 </div>
 
@@ -154,7 +156,7 @@ const HomePage = () => {
                                     <div className="w-full relative" style={{paddingTop: '100%'}}>
                                         <div className="absolute top-0 left-0 h-full w-full">
                                             <video width="100%" height="100%" autoPlay muted loop>
-                                                <source src={`${process.env.PUBLIC_URL}/assets/video/light1.mov`} type="video/mp4"/>
+                                                <source src={`${process.env.PUBLIC_URL}/assets/video/light1.mp4`} type="video/mp4"/>
                                             </video>
                                         </div>
                                     </div>

@@ -18,7 +18,7 @@ const VideoPlayer = () => {
                                 width="100%"
                                 loop
                                 playing={playing.current}
-                                url={`${process.env.PUBLIC_URL}/assets/video/${Math.random() < 0.5 ? 'light':'dark'}1.mov`}
+                                url={`${process.env.PUBLIC_URL}/assets/video/${Math.random() < 0.5 ? 'light':'dark'}1.mp4`}
                                 onBuffer={() => {setBuffering(true)}}
                                 onBufferEnd={() => {setBuffering(false)}}
                             />
