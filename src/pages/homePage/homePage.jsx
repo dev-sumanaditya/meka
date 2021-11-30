@@ -25,6 +25,35 @@ const HomePage = () => {
         }
     }
 
+
+    const getVideoToShow = () => {
+        const val = parseInt(localStorage.getItem('paginate'));
+        if (val) {
+            if (val < 3) {
+                localStorage.setItem('paginate', val + 1);
+                return val + 1;
+            } else {
+                localStorage.setItem('paginate', 1);
+                return 1;
+            }
+        } else {
+            localStorage.setItem('paginate', 1);
+            return 1;
+        }
+    }
+
+    const GetSRC = () => {
+        const x = getVideoToShow();
+        if (x === 1) {
+            return <source src={`${process.env.PUBLIC_URL}/assets/video/GUC.mp4`} type="video/mp4"/>
+        } else if (x === 2) {
+            return <source src={`${process.env.PUBLIC_URL}/assets/video/COA.mp4`} type="video/mp4"/>
+        } else if (x === 3) {
+            return <source src={`${process.env.PUBLIC_URL}/assets/video/LOU.mp4`} type="video/mp4"/>
+        }
+    }
+
+
     return (
         <div className="uppercase bg-primaryBG">
             {   showVideo &&
@@ -49,14 +78,9 @@ const HomePage = () => {
 
                         <div className="max-w-6xl mx-auto mt-8">
                             <div className="w-full flex flex-col items-center justify-center">
-                                <div className="hidden sm:block w-full mt-16 sm:mt-2">
+                                <div className="w-11/12 sm:w-10/12 md:w-7/12 lg:w-6/12 xl:w-5/12 mt-16 sm:mt-2">
                                     <video width="100%" preload="auto" autoPlay muted loop>
-                                        <source src={`${process.env.PUBLIC_URL}/assets/video/triad${Math.random() < 0.5 ? '1':'2'}.mp4`} type="video/mp4"/>
-                                    </video>
-                                </div>
-                                <div className="sm:hidden w-full">
-                                    <video width="100%" preload="auto" autoPlay muted loop>
-                                        <source src={`${process.env.PUBLIC_URL}/assets/video/GUC.mp4`} type="video/mp4"/>
+                                        <GetSRC />
                                     </video>
                                 </div>
                                 <div className="mt-14 sm:mt-10">
@@ -96,7 +120,7 @@ const HomePage = () => {
                     <SliderComponent />
                 </div>
 
-                <div className="bg-black mb-20 pb-20 pt-0 sm:pt-20">
+                <div className="sm:hidden bg-black mb-20 pb-20 pt-0 sm:pt-20">
                     <div className="max-w-5xl mx-auto flex flex-col items-center gap-20">
                         <div className="w-full sm:w-8/12 lg:w-6/12">
                             <video width="100%" height="100%" autoPlay muted loop>
@@ -133,18 +157,18 @@ const HomePage = () => {
                     img2={`${process.env.PUBLIC_URL}/assets/nft/8.jpg`}
                 />
                 
-                <div className="mt-10 px-0 sm:px-4">
-                    <div className="max-w-5xl mx-auto py-10 sm:py-28">
+                <div className="mt-10 px-0 sm:px-4 bg-black">
+                    <div className="max-w-5xl mx-auto pt-10 sm:py-28">
                         <div className="flex flex-col sm:flex-row items-center gap-10">
                             <Fade>
                                 <div className="w-full sm:w-1/2 px-4 sm:px-0">
-                                    <h2 className="text-gray-900 text-3xl">Purchase Your Depiction</h2>
-                                    <p className="my-6 text-gray-700 text-base">
+                                    <h2 className="text-white text-3xl">Purchase Your Depiction</h2>
+                                    <p className="my-6 text-gray-200 text-base">
                                     3DLUXE has a limited # of depictions! If you want to purchase your favorite brand depictions, head over to Openseas for the exclusive NFT listing. Each is 1/1.
                                     </p>
                                     <div className="pt-6">
                                         <a href="http://opensea.io/3dluxe" target="_blank">
-                                            <div className="px-10 w-max py-6 text-sm sm:text-base bg-black hover:bg-opacity-90 text-white text-center sm:text-left">
+                                            <div className="px-10 w-max py-6 text-sm sm:text-base bg-white hover:bg-opacity-90 text-black text-center sm:text-left">
                                                 Purchase
                                             </div>
                                         </a>
