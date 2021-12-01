@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import MainNavbar from '../../components/mainNavBar/mainNavBar';
 
 import Fade from 'react-reveal/Fade';
@@ -10,6 +10,7 @@ import VideoPlayer from '../../components/player/player';
 const HomePage = () => {
 
     const [showVideo, setShowVideo] = useState(false)
+
 
     const playVideo = () => {
         setShowVideo(true);
@@ -24,35 +25,6 @@ const HomePage = () => {
             document.body.style.overflow = "auto";
         }
     }
-
-
-    const getVideoToShow = () => {
-        const val = parseInt(localStorage.getItem('paginate'));
-        if (val) {
-            if (val < 3) {
-                localStorage.setItem('paginate', val + 1);
-                return val + 1;
-            } else {
-                localStorage.setItem('paginate', 1);
-                return 1;
-            }
-        } else {
-            localStorage.setItem('paginate', 1);
-            return 1;
-        }
-    }
-
-    const GetSRC = () => {
-        const x = getVideoToShow();
-        if (x === 1) {
-            return <source src={`${process.env.PUBLIC_URL}/assets/video/GUC.mp4`} type="video/mp4"/>
-        } else if (x === 2) {
-            return <source src={`${process.env.PUBLIC_URL}/assets/video/COA.mp4`} type="video/mp4"/>
-        } else if (x === 3) {
-            return <source src={`${process.env.PUBLIC_URL}/assets/video/LOU.mp4`} type="video/mp4"/>
-        }
-    }
-
 
     return (
         <div className="uppercase bg-primaryBG">
@@ -76,11 +48,16 @@ const HomePage = () => {
 
                         <MainNavbar />
 
-                        <div className="max-w-6xl mx-auto mt-8">
+                        <div className="max-w-7xl mx-auto mt-8">
                             <div className="w-full flex flex-col items-center justify-center">
-                                <div className="w-11/12 sm:w-10/12 md:w-7/12 lg:w-6/12 xl:w-5/12 mt-16 sm:mt-2">
-                                    <video width="100%" preload="auto" autoPlay muted loop>
-                                        <GetSRC />
+                                <div className="sm:hidden w-11/12 mt-2">
+                                    <video onContextMenu={e => e.preventDefault()} width="100%" preload="auto" autoPlay muted loop>
+                                        <source src={`${process.env.PUBLIC_URL}/assets/video/${Math.random() < 0.5 ? 'GUC' : 'COA'}.mp4`} type="video/mp4"/>
+                                    </video>
+                                </div>
+                                <div className="hidden sm:block mt-16 w-full">
+                                    <video onContextMenu={e => e.preventDefault()} width="100%" preload="auto" autoPlay muted loop>
+                                        <source src={`${process.env.PUBLIC_URL}/assets/video/triad${Math.random() < 0.5 ? '1' : '2'}.mp4`} type="video/mp4"/>
                                     </video>
                                 </div>
                                 <div className="mt-14 sm:mt-10">
