@@ -97,7 +97,7 @@ const HomePage = () => {
                     <SliderComponent />
                 </div>
 
-                <div className="bg-black mb-20 pb-20 pt-0 sm:pt-20">
+                {/* <div className="bg-black mb-20 pb-20 pt-0 sm:pt-20">
                     <div className="max-w-5xl mx-auto flex flex-col items-center gap-20">
                         <div className="w-full sm:w-8/12 lg:w-6/12">
                             <video width="100%" height="100%" autoPlay muted loop>
@@ -106,7 +106,7 @@ const HomePage = () => {
                         </div>
                         <a href="http://opensea.io/3dluxe" target="_blank" className="bg-white text-black text-sm px-10 py-6 cursor-pointer transform  duration-300 hover:scale-105">View on Opensea</a>
                     </div>
-                </div>
+                </div> */}
 
                 <Fade>
                     <div className="px-4">

@@ -15,8 +15,8 @@ const Footer = () => {
                     
                     <div className="w-56">
                         <div className="flex flex-col gap-2 text-gray-500">
-                            <NavLink activeClassName="active" to="/" className="text-sm">Home</NavLink>
-                            <NavLink activeClassName="active" to="/terms" className="text-sm">Terms & Conditions</NavLink>
+                            <NavLink to="/" className="text-sm" activeClassName="active">Home</NavLink>
+                            <NavLink to="/terms" className="text-sm" activeClassName="active">Terms & Conditions</NavLink>
                         </div>
                     </div>
                 </div>
