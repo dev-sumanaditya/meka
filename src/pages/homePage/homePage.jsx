@@ -157,7 +157,7 @@ const HomePage = () => {
                                     <div className="w-full relative" style={{paddingTop: '100%'}}>
                                         <div className="absolute top-0 left-0 h-full w-full">
                                             <video width="100%" height="100%" autoPlay muted loop>
-                                                <source src={`${process.env.PUBLIC_URL}/assets/video/light1.mp4`} type="video/mp4"/>
+                                                <source src={`${process.env.PUBLIC_URL}/assets/video/${Math.random() < 0.5 ? 'light':'dark'}1.mp4`} type="video/mp4"/>
                                             </video>
                                         </div>
                                     </div>
