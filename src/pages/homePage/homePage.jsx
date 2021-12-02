@@ -97,7 +97,7 @@ const HomePage = () => {
                     <SliderComponent />
                 </div>
 
-                <div className="sm:hidden bg-black mb-20 pb-20 pt-0 sm:pt-20">
+                <div className="bg-black mb-20 pb-20 pt-0 sm:pt-20">
                     <div className="max-w-5xl mx-auto flex flex-col items-center gap-20">
                         <div className="w-full sm:w-8/12 lg:w-6/12">
                             <video width="100%" height="100%" autoPlay muted loop>
@@ -134,7 +134,7 @@ const HomePage = () => {
                     img2={`${process.env.PUBLIC_URL}/assets/nft/8.jpg`}
                 />
                 
-                <div className="mt-10 px-0 sm:px-4 bg-black">
+                <div className="mt-20 px-0 sm:px-4 bg-black">
                     <div className="max-w-5xl mx-auto pt-10 sm:py-28">
                         <div className="flex flex-col sm:flex-row items-center gap-10">
                             <Fade>
